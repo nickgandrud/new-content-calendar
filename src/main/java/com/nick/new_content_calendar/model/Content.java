@@ -9,14 +9,12 @@ import java.time.LocalDateTime;
 public record Content (
         @Id
         Integer id,
-        @NotBlank
         String title,
+        @Column(value = "description")
         String desc,
         Status status,
         Type contentType,
-        @Column("DATE_CREATED")
         LocalDateTime dateCreated,
-        @Column("DATE_UPDATED")
         LocalDateTime dateUpdated,
         String url
 ){}
